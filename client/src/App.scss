@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
+
+$color-primary: #ef5338;
+$color-secondary: #313e6f;
+$color-terciary: #8AB7E5;
+$color-bg: #eeeeee;
+$color-light: white;
+$color-dark: black;
+
+%align-center-hv{display: flex;justify-content: center;align-items: center;}
+%align-center-h{display: flex;justify-content: center;}
+%align-center-v{display: flex;align-items: center;}
+
+html{scroll-behavior: smooth;}
+body{
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  font-family: 'Open Sans','Roboto', sans-serif;
+  background-color: $color-bg;
+  color: $color-dark;
+
+}
+a{
+  text-decoration: none;
+  color: $color-primary;
+}
+
+header{
+  overflow: hidden;
+  height: 50px;
+  background-color: $color-primary;
+  color: white;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+header a{
+  @extend %align-center-hv;
+  color: $color-light;
+}
+header h1{
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-left: 40px;
+}
+
+header ul{
+  display: flex;
+  font-size: 0.9rem;
+  margin-right: 40px;
+}
+
+h2{
+  @extend %align-center-v;
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 5px 0px;
+  background-color: $color-terciary;
+  flex-grow:1;
+  padding-left: 10px;
+}
+
+nav{
+  @extend %align-center-hv;
+  margin-top: 50px;
+  height: 30px;
+  font-size: 0.8rem;
+  background-color: $color-secondary;
+  color: $color-light;
+}
+
+section{@extend %align-center-h;}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  color: white;
+  margin: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.box{
+  background-color: white;
+  margin: 60px 0px;
+  width: 500px;
+}
+
+.button-row{
+  @extend %align-center-h;
+  margin: 10px;
+}
+.button-row input{
+  flex-grow: 5;
+  padding-left: 10px;
+  margin-right: 10px;
+  border: 1px solid lightgrey;
+}
+
+.btn{
+  cursor: pointer;
+  background-color: $color-secondary;
+  color: white;
+  padding: 10px 20px;
+}
+
+.btn:hover{
+  background-color: $color-primary;
+}
+
+.btn-delete{
+  @extend %align-center-hv;
+  background-color: $color-secondary;
+  height: 25px;
+  line-height: 25px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer; 
+}
+
+.btn-delete:hover{
+  background-color: $color-primary;
+}
+
+.container-column{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px;
+}
+
+.container-column h2{
+  @extend %align-center-h;
+  background-color: none;
+  padding: 4px;
+}
+
+.container-column form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.container-column form input{
+  margin: 5px 0;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  min-width: 200px;
+  border: 1px solid $color-terciary;
+}
+
+.alert{
+  padding-top: 5px;
+  color: red;
+  font-size: 0.80rem;
+}
